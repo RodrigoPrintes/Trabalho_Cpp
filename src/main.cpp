@@ -13,6 +13,7 @@ int main (){
      Play_ffmpeg play_ffmpeg;
 
     
+    std::cout<< "Selecione o video para ver a codificação:\n"; 
 
     std::string arq = play_ffmpeg.selectVideo();
     
@@ -20,7 +21,8 @@ int main (){
 
     play_ffmpeg.codec_ffmpeg(s);
 
-    play_ffmpeg.playVideo();
+    std::cout<< "Selecione o video para exibição:\n"; 
 
+    play_ffmpeg.playVideo();
     return 0;
 }
