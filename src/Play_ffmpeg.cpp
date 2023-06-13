@@ -52,14 +52,15 @@ void Play_ffmpeg::playVideo(){
 
     std::string arq = selectVideo();
     
-   // std::string s = "./data"+arq;
 
-    //codec_ffmpeg(s);
+    std::string s = "./data/"+arq;
+
+    codec_ffmpeg(s);
 
     std::string c_char = "ffplay -autoexit ./data/"+arq;
     int result = -1;
 
-    const char* arquivo = const_cast<char*>(arq.c_str());
+    //const char* arquivo = const_cast<char*>(arq.c_str());
     const char* comando = const_cast<char*>(c_char.c_str());
     try
     {
