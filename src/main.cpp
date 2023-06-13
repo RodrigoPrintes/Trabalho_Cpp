@@ -10,15 +10,17 @@ extern "C" {
 
 int main (){
   
-    Play_ffmpeg play_ffmpeg;
+     Play_ffmpeg play_ffmpeg;
 
-    play_ffmpeg.playVideo();
+    
 
     std::string arq = play_ffmpeg.selectVideo();
     
     std::string s = "./data/"+arq;
 
     play_ffmpeg.codec_ffmpeg(s);
+
+    play_ffmpeg.playVideo();
 
     return 0;
 }
